@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-1dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#aaaaaa"
+            android:textSize="15sp"
+            android:text="选择国家或地区"/>
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="搜索国家或地区"
+            android:imeOptions="actionSearch"
+            android:background="@null"
+            android:textColor="@android:color/black"
+            android:textColorHint="#aaaaaa"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="搜索"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.gss.countrycodepicker.SideBar
+            android:id="@+id/side"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentRight="true"
+            app:letterColor="#888"
+            app:letterSize="12sp"
+            app:selectColor="#d22222" />
+
+        <TextView
+            android:id="@+id/tv_letter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#80000000"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="24sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
